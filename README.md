@@ -1,3 +1,48 @@
+Special compile for Raspberry PI Zero
+=====================================
+
+I have compiled PHP7.3 for raspberry pi zero, on the RPZ, which takes hours!, here are the steps
+
+## prepare for compile
+
+// swap increase for compile
+
+sudo nano /etc/dphys-swapfile
+
+CONF_SWAPSIZE=100 to CONF_SWAPSIZE=1024
+
+sudo /etc/init.d/dphys-swapfile stop
+sudo /etc/init.d/dphys-swapfile start
+
+free -m to monitor status
+reset it back after compiling
+
+## compile php
+
+// install php source latest version (takes hours on PI ZERO... but works)
+sudo apt-get install build-essential  // already there
+sudo apt-get install bison
+sudo apt-get install libreadline6 libreadline6-dev liblirc-dev
+sudo apt-get install re2c
+
+wget http://fr2.php.net/get/php-7.3.0.tar.gz/from/this/mirror
+mv mirror php-7.3.0.tar.gz
+
+tar -zxvf php-7.3.0.tar.gz
+cd php-7.3.0
+
+./configure
+
+make
+
+sudo make install
+// takes very long time ... should investigate cross compiling
+// file upload
+memory_limit = 32M
+upload_max_filesize = 24M
+post_max_size = 32M
+max_execution_time = 60
+
 The PHP Interpreter
 ===================
 
