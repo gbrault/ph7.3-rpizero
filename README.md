@@ -5,6 +5,7 @@ I have compiled PHP7.3 for raspberry pi zero, on the RPZ, which takes hours!, he
 
 ## prepare for compile
 
+```
 // swap increase for compile
 
 sudo nano /etc/dphys-swapfile
@@ -16,9 +17,11 @@ sudo /etc/init.d/dphys-swapfile start
 
 free -m to monitor status
 reset it back after compiling
+```
 
 ## compile php
 
+```
 // install php source latest version (takes hours on PI ZERO... but works)
 sudo apt-get install build-essential  // already there
 sudo apt-get install bison
@@ -42,6 +45,7 @@ memory_limit = 32M
 upload_max_filesize = 24M
 post_max_size = 32M
 max_execution_time = 60
+```
 
 The PHP Interpreter
 ===================
