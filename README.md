@@ -1,7 +1,7 @@
 Special compile for Raspberry PI Zero
 =====================================
 
-I have compiled PHP7.3 for raspberry pi zero, on the RPZ, which takes hours!, here are the steps
+I have compiled PHP7.3 for raspberry pi zero, on the RPZ, which takes hours!, of course cross compile must be better..., here are the steps
 
   prepare for compile
   ===================
