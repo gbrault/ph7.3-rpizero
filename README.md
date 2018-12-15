@@ -50,9 +50,8 @@ max_execution_time = 60
 ## install the standalone server as a systemd service
 
 ```
-/etc/systemd/system/phpserver.service
-sudo systemctl enable --now phpserver.service
-sudo systemctl start phpserver
+sudo nano /etc/systemd/system/phpserver.service
+// this is the file content
 [Unit]
 Description=php serveur
 
@@ -64,6 +63,10 @@ RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
+
+// enable the service
+sudo systemctl enable --now phpserver.service
+sudo systemctl start phpserver
 ```
 
 The PHP Interpreter
