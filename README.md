@@ -46,7 +46,7 @@ max_execution_time = 60
 The PHP Interpreter
 ===================
 
-This is the github mirror of the official PHP repository located at
+This is a github mirror of the official PHP repository located at
 https://git.php.net.
 
 [![Build Status](https://secure.travis-ci.org/php/php-src.svg?branch=master)](http://travis-ci.org/php/php-src)
