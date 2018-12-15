@@ -71,6 +71,18 @@ WantedBy=multi-user.target
 sudo systemctl enable --now phpserver.service
 sudo systemctl start phpserver
 ```
+  Best thing to install
+  ====================
+  
+  ```
+  git clone https://github.com/gbrault/ph7.3-rpizero.git
+  cd ph7.3-rpizero
+  sudo make install
+  
+  then copy php.ini-production to /usr/local/lib/
+  earse ~/ph7.3-rpizero (save 340M)
+  
+  ```  
 
 The PHP Interpreter
 ===================
