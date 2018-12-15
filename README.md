@@ -47,6 +47,25 @@ post_max_size = 32M
 max_execution_time = 60
 ```
 
+## install the standalone server as a systemd service
+
+```
+/etc/systemd/system/phpserver.service
+sudo systemctl enable --now phpserver.service
+sudo systemctl start phpserver
+[Unit]
+Description=php serveur
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "echo 'Start php Server' && cd /var/www/html && php -S 0.0.0.0:80 &"
+ExecStop=/bin/sh -c "echo 'Stop php Server'"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
+
 The PHP Interpreter
 ===================
 
