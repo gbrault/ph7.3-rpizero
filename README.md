@@ -3,7 +3,8 @@ Special compile for Raspberry PI Zero
 
 I have compiled PHP7.3 for raspberry pi zero, on the RPZ, which takes hours!, here are the steps
 
-## prepare for compile
+  prepare for compile
+  ===================
 
 ```
 // swap increase for compile
@@ -19,7 +20,8 @@ free -m to monitor status
 reset it back after compiling
 ```
 
-## compile php
+  compile php
+  ===========
 
 ```
 // install php source latest version (takes hours on PI ZERO... but works)
@@ -46,8 +48,8 @@ upload_max_filesize = 24M
 post_max_size = 32M
 max_execution_time = 60
 ```
-
-## install the standalone server as a systemd service
+   install the standalone server as a systemd service
+   ==================================================
 
 ```
 sudo nano /etc/systemd/system/phpserver.service
