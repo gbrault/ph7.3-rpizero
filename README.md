@@ -52,6 +52,7 @@ max_execution_time = 60
 ```
 sudo nano /etc/systemd/system/phpserver.service
 // this is the file content
+// php files are located in /var/www/html that should exist to work
 [Unit]
 Description=php serveur
 
